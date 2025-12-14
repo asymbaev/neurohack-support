@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroHack Support</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Animated background gradient orbs */
+        body::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 183, 0, 0.15) 0%, transparent 70%);
+            top: -250px;
+            right: -250px;
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+        
+        body::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, transparent 70%);
+            bottom: -200px;
+            left: -200px;
+            border-radius: 50%;
+            animation: float 10s ease-in-out infinite reverse;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 30px); }
+        }
+        
+        .container {
+            max-width: 500px;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .logo {
+            font-size: 48px;
+            margin-bottom: 12px;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, #FFB700 0%, #FFA500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        
+        .email-container {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 183, 0, 0.2);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .email-container:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 183, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        
+        .email-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #FFB700;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .email-link {
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .email-link:hover {
+            color: #FFB700;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 40px 24px;
+            }
+            
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 16px;
+            }
+            
+            .email-link {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">⚡</div>
+        <h1>NeuroHack Support</h1>
+        <p class="subtitle">We're here to help you rewire</p>
+        
+        <div class="email-container">
+            <div class="email-label">Contact Us</div>
+            <a href="mailto:contact.neurohack@gmail.com" class="email-link">
+                contact.neurohack@gmail.com
+            </a>
+        </div>
+        
+        <div class="footer">
+            © 2025 NeuroHack
+        </div>
+    </div>
+</body>
+</html>
